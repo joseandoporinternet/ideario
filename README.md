@@ -1,6 +1,7 @@
 # Ideario 📝
 
 Una aplicación de notas rápida y minimalista, construida con **React** y **Vite**, y potenciada por **PocketBase** como backend todo en uno.
+Puedes probarla aqui: [APPWeb](https://ideario-production.up.railway.app/)
 
 ![GIF o Screenshot del Proyecto](https://pocketbase-production-026e.up.railway.app/api/files/pbc_3446931122/7u7fbycc9o5168j/ideario_ss_9t8hll387k.PNG?token=)
 
