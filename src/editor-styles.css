@@ -1,0 +1,189 @@
+/* Estilos principales del editor estilo Notion */
+.notion-editor {
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(55, 53, 47);
+}
+
+.notion-editor p {
+  margin: 1px 0;
+  min-height: 1.5em;
+}
+
+.notion-editor p:first-child {
+  margin-top: 0;
+}
+
+.notion-editor p:last-child {
+  margin-bottom: 0;
+}
+
+/* Encabezados estilo Notion */
+.notion-editor h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 2rem 0 1rem 0;
+  color: rgb(55, 53, 47);
+}
+
+.notion-editor h2 {
+  font-size: 1.875em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.5rem 0 0.5rem 0;
+  color: rgb(55, 53, 47);
+}
+
+.notion-editor h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1rem 0 0.5rem 0;
+  color: rgb(55, 53, 47);
+}
+
+/* Listas estilo Notion */
+.notion-editor .notion-list {
+  padding-left: 0;
+  margin: 2px 0;
+}
+
+.notion-editor .notion-list li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5em;
+  margin: 1px 0;
+  min-height: 1.5em;
+}
+
+.notion-editor .notion-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgb(55, 53, 47);
+  font-weight: bold;
+}
+
+.notion-editor .notion-ordered-list {
+  padding-left: 0;
+  margin: 2px 0;
+  counter-reset: notion-counter;
+}
+
+.notion-editor .notion-ordered-list li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5em;
+  margin: 1px 0;
+  min-height: 1.5em;
+  counter-increment: notion-counter;
+}
+
+.notion-editor .notion-ordered-list li::before {
+  content: counter(notion-counter) ".";
+  position: absolute;
+  left: 0;
+  color: rgb(55, 53, 47);
+  font-weight: 500;
+}
+
+/* Citas estilo Notion */
+.notion-editor .notion-quote {
+  border-left: 3px solid rgb(55, 53, 47);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-size: 1em;
+  color: rgb(55, 53, 47);
+  background: rgba(55, 53, 47, 0.02);
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+/* Código estilo Notion */
+.notion-editor code {
+  background: rgba(135, 131, 120, 0.15);
+  color: #eb5757;
+  border-radius: 3px;
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.notion-editor .notion-code-block {
+  background: rgb(247, 246, 243);
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(55, 53, 47);
+  border: 1px solid rgba(55, 53, 47, 0.16);
+}
+
+/* Enlaces estilo Notion */
+.notion-editor .notion-link {
+  color: rgb(55, 53, 47);
+  text-decoration: underline;
+  text-decoration-color: rgba(55, 53, 47, 0.4);
+  transition: text-decoration-color 0.2s;
+}
+
+.notion-editor .notion-link:hover {
+  text-decoration-color: rgb(55, 53, 47);
+}
+
+/* Imágenes estilo Notion */
+.notion-editor .notion-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+  margin: 1rem 0;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+}
+
+/* Placeholder personalizado */
+.notion-editor .ProseMirror p.is-editor-empty:first-child::before {
+  color: rgba(55, 53, 47, 0.4);
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Focus states */
+.notion-editor .has-focus {
+  outline: none;
+  box-shadow: rgba(46, 170, 220, 0.2) 0px 0px 0px 2px;
+  border-radius: 3px;
+}
+
+/* Selección de texto */
+.notion-editor ::selection {
+  background-color: rgba(46, 170, 220, 0.2);
+}
+
+/* Espaciado entre bloques */
+.notion-editor > div > p,
+.notion-editor > div > h1,
+.notion-editor > div > h2,
+.notion-editor > div > h3,
+.notion-editor > div > ul,
+.notion-editor > div > ol,
+.notion-editor > div > blockquote,
+.notion-editor > div > pre {
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+/* Primer elemento sin margen superior */
+.notion-editor > div > *:first-child {
+  margin-top: 0;
+}
+
+/* Último elemento sin margen inferior */
+.notion-editor > div > *:last-child {
+  margin-bottom: 0;
+}
